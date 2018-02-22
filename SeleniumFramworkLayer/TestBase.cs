@@ -16,6 +16,7 @@ namespace SeleniumFramworkLayer
     {
         public static IWebDriver driver;
 
+        [SetUp]
         public void TestInitialize()
         {
 
