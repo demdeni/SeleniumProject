@@ -14,15 +14,15 @@ namespace SeleniumFramworkLayer
 {
     public class TestBase : ITestBase
     {
-        public static IWebDriver driver;
+        public static IWebDriver driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));;
 
         [SetUp]
         public void TestInitialize()
         {
 
-            driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            //driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
 
-            OnSetUp();
+            //OnSetUp();
 
             driver.Navigate().GoToUrl("https://syneron-candela.com");
 
