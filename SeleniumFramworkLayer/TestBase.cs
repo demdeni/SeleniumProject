@@ -14,22 +14,22 @@ namespace SeleniumFramworkLayer
 {
     public class TestBase : ITestBase
     {
-        public static IWebDriver driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+        public static IWebDriver driver;
 
         [SetUp]
         public void TestInitialize()
         {
 
-            //driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-
-            //OnSetUp();
+            driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            driver.Manage().Window.Maximize();
 
             driver.Navigate().GoToUrl("https://syneron-candela.com");
 
-        }
-
+        }        
+        
         public void TestExecution()
         {
+
             TestInitialize();
 
             try
@@ -45,7 +45,6 @@ namespace SeleniumFramworkLayer
                 //TestReport.SaveHTMLFile();
             }
 
-            OneTearDown();
             TestCleanup();
         }
 
@@ -58,19 +57,12 @@ namespace SeleniumFramworkLayer
             }
         }
 
+        [TearDown]
         public void TestCleanup()
         {
+            driver.Manage().Cookies.DeleteAllCookies();
             driver.Quit();
         }
 
-        public void OneTearDown()
-        {
-            driver.Manage().Cookies.DeleteAllCookies();
-        }
-
-        public void OnSetUp()
-        {
-            driver.Manage().Window.Maximize();
-        }
     }
 }

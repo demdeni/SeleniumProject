@@ -16,9 +16,5 @@ namespace SeleniumFramworkLayer
 
         void TestCleanup();
 
-        void OneTearDown();
-
-        void OnSetUp();
-
     }
 }

@@ -13,7 +13,7 @@ namespace SeleniumProject
         static void Main(string[] args)
         {
             TestBase runproject = new TestBase();
-            runproject.TestInitialize();
+            runproject.TestExecution();
         }
     }
 }

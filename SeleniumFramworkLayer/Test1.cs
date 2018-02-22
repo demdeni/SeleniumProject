@@ -10,15 +10,12 @@ using System.Reflection;
 
 namespace SeleniumFramworkLayer
 {
-    public class Test1
+    public class Test1 : TestBase
     {
         [Test]
         public static void RunTest()
         {
-            //TestBase.driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-
-
-            //TestBase.driver.Navigate().GoToUrl("https://syneron-candela.com");
+            
         }
     }
 }
