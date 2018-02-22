@@ -14,7 +14,7 @@ namespace SeleniumFramworkLayer
 {
     public class TestBase : ITestBase
     {
-        public static IWebDriver driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));;
+        public static IWebDriver driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
 
         [SetUp]
         public void TestInitialize()
