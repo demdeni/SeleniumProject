@@ -15,10 +15,10 @@ namespace SeleniumFramworkLayer
         [Test]
         public static void RunTest()
         {
-            TestBase.driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            //TestBase.driver = new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
 
 
-            TestBase.driver.Navigate().GoToUrl("https://syneron-candela.com");
+            //TestBase.driver.Navigate().GoToUrl("https://syneron-candela.com");
         }
     }
 }
