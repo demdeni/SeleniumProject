@@ -22,7 +22,7 @@ namespace SeleniumFramworkLayer
         {
 
             driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-            //driver.Manage().Window.Maximize();
+            driver.Manage().Window.Maximize();
 
             driver.Navigate().GoToUrl("https://syneron-candela.com");
 
