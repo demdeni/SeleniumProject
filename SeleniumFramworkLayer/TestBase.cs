@@ -30,7 +30,6 @@ namespace SeleniumFramworkLayer
         
         public void TestExecution()
         {
-
             TestInitialize();
 
             try
