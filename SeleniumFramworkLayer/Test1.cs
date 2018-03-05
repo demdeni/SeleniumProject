@@ -13,6 +13,7 @@ using OpenQA.Selenium.Remote;
 
 namespace SeleniumFramworkLayer
 {
+    [TestFixture]
     public class Test1 : TestBase
     {
         private static string baseURL = "https://syneron-candela.com/int";
