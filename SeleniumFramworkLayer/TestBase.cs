@@ -33,14 +33,14 @@ namespace SeleniumFramworkLayer
 
         }
 
-        private static string baseURL = "https://syneron-candela.com/int";
+        private string baseURL = "https://syneron-candela.com/int";
         //public static IWebDriver driver;
         //public RemoteWebDriver driver1;
         //private string browser;
         public TestContext TestContext { get; set; }
 
         [Test]
-        public static void RunTestBaseClass()
+        public void RunTestBaseClass()
         {
             //ChromeOptions option = new ChromeOptions();
             //option.AddArgument("--headless");
