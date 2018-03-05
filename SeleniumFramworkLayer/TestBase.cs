@@ -13,6 +13,7 @@ using NUnit.Framework;
 
 namespace SeleniumFramworkLayer
 {
+    [TestFixture]
     public class TestBase : ITestBase
     {
         public static IWebDriver driver;
