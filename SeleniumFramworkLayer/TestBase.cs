@@ -16,14 +16,14 @@ namespace SeleniumFramworkLayer
     
     public class TestBase : ITestBase
     {
-        public IWebDriver driver;
+        public static IWebDriver driver;
 
         [SetUp]
         public void TestInitialize()
         {
-            ChromeOptions option = new ChromeOptions();
-            option.AddArgument("--headless");
-            driver = new ChromeDriver(option);
+            //ChromeOptions option = new ChromeOptions();
+            //option.AddArgument("--headless");
+            //driver = new ChromeDriver(option);
 
 
             //driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
@@ -33,32 +33,33 @@ namespace SeleniumFramworkLayer
 
         }
 
+
         private string baseURL = "https://syneron-candela.com/int";
         ////public static IWebDriver driver;
         ////public RemoteWebDriver driver1;
         ////private string browser;
         //public TestContext TestContext { get; set; }
 
-        [Test]
-        public void RunTestBaseClass()
-        {
-            //ChromeOptions option = new ChromeOptions();
-            //option.AddArgument("--headless");
-            //driver = new ChromeDriver(option);
+        //[Test]
+        //public void RunTestBaseClass()
+        //{
+        //    //ChromeOptions option = new ChromeOptions();
+        //    //option.AddArgument("--headless");
+        //    //driver = new ChromeDriver(option);
 
-            driver.Navigate().GoToUrl(baseURL);
+        //    driver.Navigate().GoToUrl(baseURL);
 
-            var element = driver.FindElement(By.ClassName("wlcm-title"));
-            Assert.IsTrue(element.Displayed);
+        //    var element = driver.FindElement(By.ClassName("wlcm-title"));
+        //    Assert.IsTrue(element.Displayed);
 
-            driver.FindElement(By.Id("cboxClose")).Click();
+        //    driver.FindElement(By.Id("cboxClose")).Click();
 
-            var logo = driver.FindElement(By.Id("logo"));
-            Assert.IsTrue(logo.Displayed);
-            var element1 = driver.FindElement(By.ClassName("sgfgsfgs"));
-            Assert.IsNotNull(element1);
-            //driver.Quit();
-        }
+        //    var logo = driver.FindElement(By.Id("logo"));
+        //    Assert.IsTrue(logo.Displayed);
+        //    //var element1 = driver.FindElement(By.ClassName("sgfgsfgs"));
+        //    //Assert.IsNotNull(element1);
+        //    //driver.Quit();
+        //}
 
         public void TestExecution()
         {
@@ -92,8 +93,8 @@ namespace SeleniumFramworkLayer
         [TearDown]
         public void TestCleanup()
         {
-            driver.Manage().Cookies.DeleteAllCookies();
-            driver.Quit();
+            //driver.Manage().Cookies.DeleteAllCookies();
+            //driver.Quit();
         }
 
     }
