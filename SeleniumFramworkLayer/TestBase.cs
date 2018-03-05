@@ -20,11 +20,15 @@ namespace SeleniumFramworkLayer
         [SetUp]
         public void TestInitialize()
         {
+            ChromeOptions option = new ChromeOptions();
+            option.AddArgument("--headless");
+            driver = new ChromeDriver(option);
 
-            driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-            driver.Manage().Window.Maximize();
 
-            driver.Navigate().GoToUrl("https://syneron-candela.com");
+            //driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            //driver.Manage().Window.Maximize();
+
+            //driver.Navigate().GoToUrl("https://syneron-candela.com");
 
         }        
         
