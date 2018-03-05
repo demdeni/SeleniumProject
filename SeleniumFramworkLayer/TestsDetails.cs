@@ -32,7 +32,7 @@ namespace SeleniumFramworkLayer
             };
             TestMethodDeligate = new List<Action>
             {
-                Test1.RunTest
+                //Test1.RunTest
             };
         }
 
