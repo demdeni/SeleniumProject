@@ -17,7 +17,7 @@ namespace SeleniumFramworkLayer
     public class Test1 : TestBase
     {
         private static string baseURL = "https://syneron-candela.com/int";
-        public IWebDriver driver;
+        //public IWebDriver driver;
         //public RemoteWebDriver driver1;
         //private string browser;
         public TestContext TestContext { get; set; }

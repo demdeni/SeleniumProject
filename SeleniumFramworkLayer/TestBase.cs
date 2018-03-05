@@ -16,7 +16,7 @@ namespace SeleniumFramworkLayer
     [TestFixture]
     public class TestBase : ITestBase
     {
-        //public static IWebDriver driver;
+        public static IWebDriver driver;
 
         [SetUp]
         public void TestInitialize()
