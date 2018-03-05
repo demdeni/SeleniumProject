@@ -57,7 +57,7 @@ namespace SeleniumFramworkLayer
             Assert.IsTrue(logo.Displayed);
             var element1 = driver.FindElement(By.ClassName("sgfgsfgs"));
             Assert.IsNotNull(element1);
-            //driver.Quit();
+            driver.Quit();
         }
 
         public void TestExecution()
