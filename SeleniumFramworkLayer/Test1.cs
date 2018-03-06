@@ -30,6 +30,7 @@ namespace SeleniumFramworkLayer
             driver = new ChromeDriver(option);
 
 
+
             driver.Navigate().GoToUrl(baseURL);
 
             var element = driver.FindElement(By.ClassName("wlcm-title"));
