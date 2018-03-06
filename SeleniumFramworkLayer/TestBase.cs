@@ -25,6 +25,7 @@ namespace SeleniumFramworkLayer
             //option.AddArgument("--headless");
             //driver = new ChromeDriver(option);
 
+
             //driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
             //driver.Manage().Window.Maximize();
 
